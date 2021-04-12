@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+
+        <!-- chart js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"
+            integrity="sha256-OSW9/BPFwmBNYIPuSLygt3lPae4mVUHtCFgrFTPzCNI="
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- font awesome 5 script added through config.js file -->
+        <!-- api keys are stored in this file -->
+        <script src="./config.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="search-container">
+                <input
+                    type="search"
+                    name="search"
+                    id="search_city_name"
+                    placeholder="Press / to search by City name"
+                    class="search"
+                />
+                <i class="fas fa-search-location" id="search_icon"></i>
+            </div>
+            <div class="container">
+                <div class="dashboard">
+                    <h3 id="city_name"></h3>
+                    <h4 id="weather_description"></h4>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="leftSide">
+                                <h2 id="main_temp"></h2>
+                                <h5>Temperature</h5>
+                                <!-- <div class="icon">T</div> -->
+                                <div class="icon">
+                                    <i
+                                        class="fas fa-thermometer-three-quarters"
+                                    ></i>
+                                </div>
+                            </div>
+                            <i></i>
+                        </div>
+                        <div class="card">
+                            <div class="leftSide">
+                                <h2 id="main_humidity"></h2>
+                                <h5>Humidity</h5>
+                                <!-- <div class="icon">H</div> -->
+                                <div class="icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                            </div>
+                            <i></i>
+                        </div>
+                        <div class="card">
+                            <div class="leftSide">
+                                <h2 id="main_pressure"></h2>
+                                <h5>Pressure</h5>
+                                <!-- <div class="icon">P</div> -->
+                                <div class="icon">
+                                    <i class="fas fa-wind"></i>
+                                </div>
+                            </div>
+                            <i></i>
+                        </div>
+                    </div>
+
+                    <div class="tasks">
+                        <div class="task task1 canvas-container">
+                            <h5>Five Day Forecast</h5>
+                            <canvas
+                                id="myChart"
+                                width="100"
+                                height="50"
+                            ></canvas>
+                        </div>
+
+                        <div class="task task2" id="weather_details"></div>
+                    </div>
+
+                    <!-- <h4>-</h4> -->
+                    <div class="projects">
+                        <div class="project project1">
+                            <div>
+                                <h6>Sun rise</h6>
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <h4 id="sys_sunrise">00:00</h4>
+                            <div>
+                                <p class="time_zone"></p>
+                                <p>
+                                    <i class="far fa-calendar-check"></i>
+                                    <span id="sunrise_date"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project project2">
+                            <div>
+                                <h6>Sun set</h6>
+                                <i class="fas fa-cloud-moon"></i>
+                            </div>
+                            <h4 id="sys_sunset">00:00</h4>
+                            <div>
+                                <p class="time_zone"></p>
+                                <p>
+                                    <i class="far fa-calendar-check"></i>
+                                    <span id="sunset_date"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-two">
+            <div id="map"></div>
+        </div>
+
+        <script src="./scripts/script.js"></script>
+        <!-- Google maps API -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+            async
+        ></script>
+    </body>
+</html>

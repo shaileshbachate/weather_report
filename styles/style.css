@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nunito", "Montserrat";
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+:root {
+  --gradient: linear-gradient(
+        to bottom left,
+        rgba(100, 148, 237, 0.1),
+        rgba(100, 148, 237, 0.5),
+        rgba(105, 90, 205, 0.7)
+    );
+  --bg-size: 300%;
+  --transition-time: 5s;
+}
+
+@-webkit-keyframes bg-change {
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bg-change {
+  100% {
+    background-position: right;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3%;
+  background: var(--gradient);
+  background-size: var(--bg-size);
+  background-position: left;
+  -webkit-animation: bg-change var(--transition-time) infinite alternate;
+          animation: bg-change var(--transition-time) infinite alternate;
+}
+
+.wrapper {
+  z-index: 1;
+  position: relative;
+  height: 670px;
+  width: 880px;
+  background: -webkit-gradient(linear, left bottom, right top, from(slateblue), to(cornflowerblue));
+  background: linear-gradient(to top right, slateblue, cornflowerblue);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.wrapper .search-container #search_icon {
+  cursor: pointer;
+}
+
+.wrapper .search-container #search_icon:active {
+  color: #8c94b9;
+}
+
+.wrapper .search-container .search {
+  font-size: 1.01rem;
+  position: absolute;
+  top: 33.5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 7px 50px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.wrapper .search-container .search:focus {
+  background: #fff;
+  color: black;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.wrapper .search-container .search:focus + i {
+  color: #1221a5;
+}
+
+.wrapper .search-container i {
+  position: absolute;
+  top: 33.5px;
+  left: 27.5%;
+  padding: 7px 0;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.icon {
+  font-size: 35px;
+  position: absolute;
+  color: #1221a57a;
+  color: transparent;
+  background: -webkit-gradient(linear, left bottom, right top, from(cornflowerblue), to(slateblue));
+  background: linear-gradient(to top right, cornflowerblue, slateblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.card .icon {
+  top: 50%;
+  left: 78%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+h2,
+h3 {
+  margin: 0;
+  color: #1221a5;
+}
+
+h4,
+h5 {
+  margin: 0;
+  color: #a7aecc;
+}
+
+.container {
+  background: #fff;
+  height: 603px;
+  width: 813px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .dashboard {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(105, 90, 205, 0.1)), to(rgba(100, 148, 237, 0.1)));
+  background: linear-gradient(to top right, rgba(105, 90, 205, 0.1), rgba(100, 148, 237, 0.1));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 25px;
+}
+
+.container .dashboard .cards {
+  min-height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard .cards .card {
+  position: relative;
+  width: 31%;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(105, 90, 205, 0.1);
+          box-shadow: 0 0 10px rgba(105, 90, 205, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dashboard .cards .card .leftSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .dashboard .tasks {
+  min-height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard .tasks .task {
+  background: #fff;
+  margin-top: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(105, 90, 205, 0.1);
+          box-shadow: 0 0 10px rgba(105, 90, 205, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+}
+
+.container .dashboard .tasks .task p {
+  margin: 0;
+  color: #8c94b9;
+  font-size: 0.65em;
+}
+
+.container .dashboard .tasks .task h4 {
+  color: #1221a5;
+}
+
+.container .dashboard .tasks .task h6 {
+  margin: 0;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.container .dashboard .tasks .task1 {
+  width: 60%;
+}
+
+.container .dashboard .tasks .task1 h6 {
+  color: #695acd;
+  background: rgba(105, 90, 205, 0.2);
+}
+
+.container .dashboard .tasks .task2 {
+  width: 36.5%;
+}
+
+.container .dashboard .tasks .task2 h6 {
+  color: #6494ed;
+  background: rgba(100, 148, 237, 0.2);
+}
+
+.container .dashboard .projects {
+  min-height: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard .projects .project {
+  width: 48.25%;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(105, 90, 205, 0.1);
+          box-shadow: 0 0 10px rgba(105, 90, 205, 0.1);
+  border-bottom: 4px solid cornflowerblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+}
+
+.container .dashboard .projects .project p {
+  margin: 5px 0 0 0;
+  color: #8c94b9;
+  font-size: 0.55em;
+}
+
+.container .dashboard .projects .project h4 {
+  color: #1221a5;
+}
+
+.container .dashboard .projects .project h6 {
+  margin: 5px 5px 5px 0;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.container .dashboard .projects .project div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dashboard .projects .project div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard .projects .project div:nth-of-type(1) i {
+  font-size: 25px;
+  color: #1221a57a;
+  color: transparent;
+  background: -webkit-gradient(linear, left bottom, right top, from(cornflowerblue), to(slateblue));
+  background: linear-gradient(to top right, cornflowerblue, slateblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.container .dashboard .projects .project div:nth-of-type(2) {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard .projects .project1 h6 {
+  color: #6494ed;
+  background: rgba(100, 148, 237, 0.2);
+}
+
+.container .dashboard .projects .project2 h6:nth-of-type(1) {
+  color: #695acd;
+  background: rgba(105, 90, 205, 0.2);
+}
+
+.container .dashboard .projects .project2 h6:nth-of-type(2) {
+  color: violet;
+  background: rgba(238, 130, 238, 0.2);
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
